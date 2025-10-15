@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+    font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #06beb6, #48b1bf, #8e44ad, #f39c12);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  scroll-behavior: smooth;
+}
+
+header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+
+h1 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+a:hover {
+  text-decoration: underline wavy red;
+}
+
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+  nav {
+  background-color: rgba(0, 0, 0, 0.2); /* black with 20% opacity */
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+}
+
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #6a5353;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+     color: #cb70bc; /* Change this color to preferred hover color */
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.8); /* Change shadow color to match hover colour*/
+
+    transition: color 0.3s, text-shadow 0.3s; /* Smooth transition for color and shadow */
+}
+        
+section {
+  min-height: 100vh;
+  padding: 100px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.btn {
+  background: #06beb6;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('fonts/MyCustomFont.woff2') format('woff2');
+}
+body {
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+/* Links that open in new tab */
+a[target="_blank"] {
+  color: red;
+}
+
+/* Input fields of type password */
+input[type="password"] {
+  border: 2px solid #4CAF50;
+}
+
+.hero {
+  height: 100vh;
+  background: url("./images/my photo.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay with blur */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent layer */
+  backdrop-filter: blur(6px); /* blur effect */
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1; /* keeps text above blur */
+  color: #111;
+  font-family: 'Poppins', sans-serif;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 4rem;        /* bigger font */
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+  line-height: 1.2;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #333;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  letter-spacing: 2px;
+  color: #444;
+}
+
+/* Highlight keyword */
+.hero-text span {
+  color: #ff4d6d;
+}
+
+/* Hover effect */
+.hero-text h1:hover {
+  letter-spacing: 5px;
+  transition: 0.3s ease-in-out;
+  color: #222;
+}
+
+/* Fade-in animation */
+.hero-text {
+  animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
